@@ -1,0 +1,15 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>USer</title>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form method="POST" action="{% url 'user:user' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>

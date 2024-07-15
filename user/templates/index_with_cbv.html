@@ -1,0 +1,11 @@
+{% if user %}
+    <h1> {{andha}} </h1>
+    <ul>
+    {% for u in user %}
+        <li><a href="{% url 'user:detail' u.id %}"> {{ u.email }}</a></li>
+        
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
